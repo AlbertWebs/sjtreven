@@ -573,29 +573,25 @@
     <!-- Bottom Navigation for Mobile -->
     <nav class="lg:hidden bottom-nav">
         <div class="flex items-center justify-around py-2">
-            <a href="{{ route('home') }}" class="bottom-nav-item flex flex-col items-center justify-center px-2 py-2 text-gray-700 {{ request()->routeIs('home') ? 'active' : '' }}">
-                <span class="text-xl mb-1">🏠</span>
-                <span class="text-[9px] font-bold">Home</span>
+            <a href="{{ route('home') }}" class="bottom-nav-item flex flex-col items-center justify-center px-3 py-2 text-gray-700 {{ request()->routeIs('home') ? 'active' : '' }}">
+                <span class="text-2xl mb-1">🏠</span>
+                <span class="text-[10px] font-bold">Home</span>
             </a>
-            <a href="{{ route('about') }}" class="bottom-nav-item flex flex-col items-center justify-center px-2 py-2 text-gray-700 {{ request()->routeIs('about') ? 'active' : '' }}">
-                <span class="text-xl mb-1">👤</span>
-                <span class="text-[9px] font-bold">About</span>
+            <a href="{{ route('about') }}" class="bottom-nav-item flex flex-col items-center justify-center px-3 py-2 text-gray-700 {{ request()->routeIs('about') ? 'active' : '' }}">
+                <span class="text-2xl mb-1">👤</span>
+                <span class="text-[10px] font-bold">About</span>
             </a>
-            <a href="{{ route('books') }}" class="bottom-nav-item flex flex-col items-center justify-center px-2 py-2 text-gray-700 {{ request()->routeIs('books') ? 'active' : '' }}">
-                <span class="text-xl mb-1">📚</span>
-                <span class="text-[9px] font-bold">Books</span>
+            <a href="{{ route('books') }}" class="bottom-nav-item flex flex-col items-center justify-center px-3 py-2 text-gray-700 {{ request()->routeIs('books') ? 'active' : '' }}">
+                <span class="text-2xl mb-1">📚</span>
+                <span class="text-[10px] font-bold">Books</span>
             </a>
-            <a href="{{ route('articles') }}" class="bottom-nav-item flex flex-col items-center justify-center px-2 py-2 text-gray-700 {{ request()->routeIs('articles') ? 'active' : '' }}">
-                <span class="text-xl mb-1">📝</span>
-                <span class="text-[9px] font-bold">Articles</span>
+            <a href="{{ route('articles') }}" class="bottom-nav-item flex flex-col items-center justify-center px-3 py-2 text-gray-700 {{ request()->routeIs('articles') ? 'active' : '' }}">
+                <span class="text-2xl mb-1">📝</span>
+                <span class="text-[10px] font-bold">Articles</span>
             </a>
-            <a href="{{ route('apps') }}" class="bottom-nav-item flex flex-col items-center justify-center px-2 py-2 text-gray-700 {{ request()->routeIs('apps') ? 'active' : '' }}">
-                <span class="text-xl mb-1">📱</span>
-                <span class="text-[9px] font-bold">Apps</span>
-            </a>
-            <a href="{{ route('contacts') }}" class="bottom-nav-item flex flex-col items-center justify-center px-2 py-2 text-gray-700 {{ request()->routeIs('contacts') ? 'active' : '' }}">
-                <span class="text-xl mb-1">✉️</span>
-                <span class="text-[9px] font-bold">Contact</span>
+            <a href="{{ route('contacts') }}" class="bottom-nav-item flex flex-col items-center justify-center px-3 py-2 text-gray-700 {{ request()->routeIs('contacts') ? 'active' : '' }}">
+                <span class="text-2xl mb-1">✉️</span>
+                <span class="text-[10px] font-bold">Contact</span>
             </a>
         </div>
     </nav>
