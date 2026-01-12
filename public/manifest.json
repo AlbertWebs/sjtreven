@@ -38,6 +38,18 @@
       ]
     },
     {
+      "name": "Articles",
+      "short_name": "Articles",
+      "description": "Articles and guides",
+      "url": "/articles",
+      "icons": [
+        {
+          "src": "/favicon/icon.jpeg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
       "name": "About",
       "short_name": "About",
       "description": "About the author",

@@ -21,3 +21,7 @@ Route::get('/apps', function () {
 Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
+
+Route::get('/articles', function () {
+    return view('articles');
+})->name('articles');

@@ -78,6 +78,99 @@
         }
     </script>
     
+    <!-- PWA Install Prompt -->
+    <script>
+        let deferredPrompt;
+        let installBannerShown = localStorage.getItem('pwa-install-dismissed') === 'true';
+        
+        // Capture the beforeinstallprompt event
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // Show install banner if not dismissed
+            if (!installBannerShown) {
+                setTimeout(() => {
+                    showInstallBanner();
+                }, 3000); // Show after 3 seconds
+            }
+        });
+        
+        // Show install banner
+        function showInstallBanner() {
+            const banner = document.getElementById('pwa-install-banner');
+            if (banner && !installBannerShown) {
+                banner.classList.remove('hidden');
+                banner.classList.add('animate-slide-up');
+            }
+        }
+        
+        // Install button click handler
+        function installPWA() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the install prompt');
+                    }
+                    deferredPrompt = null;
+                    hideInstallBanner();
+                });
+            }
+        }
+        
+        // Dismiss banner
+        function dismissInstallBanner() {
+            const banner = document.getElementById('pwa-install-banner');
+            if (banner) {
+                banner.classList.add('hidden');
+                localStorage.setItem('pwa-install-dismissed', 'true');
+                installBannerShown = true;
+            }
+        }
+        
+        // Check if already installed
+        window.addEventListener('appinstalled', () => {
+            console.log('PWA was installed');
+            hideInstallBanner();
+            deferredPrompt = null;
+        });
+        
+        function hideInstallBanner() {
+            const banner = document.getElementById('pwa-install-banner');
+            if (banner) {
+                banner.classList.add('hidden');
+            }
+        }
+        
+        // iOS Safari detection and instructions
+        function isIOS() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        }
+        
+        function showIOSInstructions() {
+            const iosBanner = document.getElementById('pwa-ios-install');
+            if (iosBanner && !localStorage.getItem('pwa-ios-dismissed')) {
+                iosBanner.classList.remove('hidden');
+                iosBanner.classList.add('animate-slide-up');
+            }
+        }
+        
+        if (isIOS()) {
+            window.addEventListener('load', () => {
+                setTimeout(showIOSInstructions, 3000);
+            });
+        }
+        
+        function dismissIOSBanner() {
+            const iosBanner = document.getElementById('pwa-ios-install');
+            if (iosBanner) {
+                iosBanner.classList.add('hidden');
+                localStorage.setItem('pwa-ios-dismissed', 'true');
+            }
+        }
+    </script>
+    
     <style>
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
             /* Retina display optimizations */
@@ -255,6 +348,18 @@
             position: relative;
             border-radius: 12px;
             padding: 8px 12px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .bottom-nav-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60%;
+            background: rgba(0, 0, 0, 0.08);
         }
         
         .bottom-nav-item::before {
@@ -335,6 +440,39 @@
                 padding-bottom: 80px;
             }
         }
+        
+        /* PWA Install Banner */
+        .pwa-install-banner {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 99;
+            max-width: 90%;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.5s ease-out forwards;
+        }
+        
+        @media (min-width: 1024px) {
+            .pwa-install-banner {
+                bottom: 20px;
+            }
+        }
     </style>
     @stack('styles')
 </head>
@@ -360,6 +498,10 @@
                     <a href="{{ route('books') }}" class="nav-link font-sans text-sm font-semibold text-gray-900 {{ request()->routeIs('books') ? 'active' : '' }}">
                         <span class="nav-icon">📚</span>
                         <span>Books</span>
+                    </a>
+                    <a href="{{ route('articles') }}" class="nav-link font-sans text-sm font-semibold text-gray-900 {{ request()->routeIs('articles') ? 'active' : '' }}">
+                        <span class="nav-icon">📝</span>
+                        <span>Articles</span>
                     </a>
                     <a href="{{ route('apps') }}" class="nav-link font-sans text-sm font-semibold text-gray-900 {{ request()->routeIs('apps') ? 'active' : '' }}">
                         <span class="nav-icon">📱</span>
@@ -407,6 +549,10 @@
                     <span class="text-lg">📚</span>
                     <span>Books</span>
                 </a>
+                <a href="{{ route('articles') }}" class="flex items-center gap-3 px-4 py-3 rounded-lg font-sans text-sm font-semibold text-gray-900 hover:bg-white/30 transition-all duration-300 hover:translate-x-2 hover:scale-105 {{ request()->routeIs('articles') ? 'bg-white/40 font-bold' : '' }}">
+                    <span class="text-lg">📝</span>
+                    <span>Articles & Guides</span>
+                </a>
                 <a href="{{ route('apps') }}" class="flex items-center gap-3 px-4 py-3 rounded-lg font-sans text-sm font-semibold text-gray-900 hover:bg-white/30 transition-all duration-300 hover:translate-x-2 hover:scale-105 {{ request()->routeIs('apps') ? 'bg-white/40 font-bold' : '' }}">
                     <span class="text-lg">📱</span>
                     <span>Apps</span>
@@ -427,28 +573,113 @@
     <!-- Bottom Navigation for Mobile -->
     <nav class="lg:hidden bottom-nav">
         <div class="flex items-center justify-around py-2">
-            <a href="{{ route('home') }}" class="bottom-nav-item flex flex-col items-center justify-center px-3 py-2 text-gray-700 {{ request()->routeIs('home') ? 'active' : '' }}">
-                <span class="text-2xl mb-1">🏠</span>
-                <span class="text-[10px] font-bold">Home</span>
+            <a href="{{ route('home') }}" class="bottom-nav-item flex flex-col items-center justify-center px-2 py-2 text-gray-700 {{ request()->routeIs('home') ? 'active' : '' }}">
+                <span class="text-xl mb-1">🏠</span>
+                <span class="text-[9px] font-bold">Home</span>
             </a>
-            <a href="{{ route('about') }}" class="bottom-nav-item flex flex-col items-center justify-center px-3 py-2 text-gray-700 {{ request()->routeIs('about') ? 'active' : '' }}">
-                <span class="text-2xl mb-1">👤</span>
-                <span class="text-[10px] font-bold">About</span>
+            <a href="{{ route('about') }}" class="bottom-nav-item flex flex-col items-center justify-center px-2 py-2 text-gray-700 {{ request()->routeIs('about') ? 'active' : '' }}">
+                <span class="text-xl mb-1">👤</span>
+                <span class="text-[9px] font-bold">About</span>
             </a>
-            <a href="{{ route('books') }}" class="bottom-nav-item flex flex-col items-center justify-center px-3 py-2 text-gray-700 {{ request()->routeIs('books') ? 'active' : '' }}">
-                <span class="text-2xl mb-1">📚</span>
-                <span class="text-[10px] font-bold">Books</span>
+            <a href="{{ route('books') }}" class="bottom-nav-item flex flex-col items-center justify-center px-2 py-2 text-gray-700 {{ request()->routeIs('books') ? 'active' : '' }}">
+                <span class="text-xl mb-1">📚</span>
+                <span class="text-[9px] font-bold">Books</span>
             </a>
-            <a href="{{ route('apps') }}" class="bottom-nav-item flex flex-col items-center justify-center px-3 py-2 text-gray-700 {{ request()->routeIs('apps') ? 'active' : '' }}">
-                <span class="text-2xl mb-1">📱</span>
-                <span class="text-[10px] font-bold">Apps</span>
+            <a href="{{ route('articles') }}" class="bottom-nav-item flex flex-col items-center justify-center px-2 py-2 text-gray-700 {{ request()->routeIs('articles') ? 'active' : '' }}">
+                <span class="text-xl mb-1">📝</span>
+                <span class="text-[9px] font-bold">Articles</span>
             </a>
-            <a href="{{ route('contacts') }}" class="bottom-nav-item flex flex-col items-center justify-center px-3 py-2 text-gray-700 {{ request()->routeIs('contacts') ? 'active' : '' }}">
-                <span class="text-2xl mb-1">✉️</span>
-                <span class="text-[10px] font-bold">Contact</span>
+            <a href="{{ route('apps') }}" class="bottom-nav-item flex flex-col items-center justify-center px-2 py-2 text-gray-700 {{ request()->routeIs('apps') ? 'active' : '' }}">
+                <span class="text-xl mb-1">📱</span>
+                <span class="text-[9px] font-bold">Apps</span>
+            </a>
+            <a href="{{ route('contacts') }}" class="bottom-nav-item flex flex-col items-center justify-center px-2 py-2 text-gray-700 {{ request()->routeIs('contacts') ? 'active' : '' }}">
+                <span class="text-xl mb-1">✉️</span>
+                <span class="text-[9px] font-bold">Contact</span>
             </a>
         </div>
     </nav>
+
+    <!-- PWA Install Banner (Android/Chrome) -->
+    <div id="pwa-install-banner" class="hidden pwa-install-banner">
+        <div class="bg-white/95 backdrop-blur-xl rounded-lg shadow-2xl border-2 border-gray-900/20 p-4 mx-4">
+            <div class="flex items-start gap-3">
+                <div class="flex-shrink-0">
+                    <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-gray-900 text-sm mb-1">Install App</h3>
+                    <p class="text-xs text-gray-600 mb-3">Add SJ Treven to your home screen for quick access</p>
+                    <div class="flex gap-2">
+                        <button 
+                            onclick="installPWA()"
+                            class="flex-1 font-sans text-xs font-bold text-white bg-gray-900 hover:bg-gray-800 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
+                        >
+                            Install
+                        </button>
+                        <button 
+                            onclick="dismissInstallBanner()"
+                            class="font-sans text-xs font-semibold text-gray-600 hover:text-gray-900 px-4 py-2 rounded-lg transition-colors"
+                        >
+                            Later
+                        </button>
+                    </div>
+                </div>
+                <button 
+                    onclick="dismissInstallBanner()"
+                    class="flex-shrink-0 text-gray-400 hover:text-gray-600 transition-colors"
+                    aria-label="Close"
+                >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PWA Install Banner (iOS Safari) -->
+    <div id="pwa-ios-install" class="hidden pwa-install-banner">
+        <div class="bg-white/95 backdrop-blur-xl rounded-lg shadow-2xl border-2 border-gray-900/20 p-4 mx-4">
+            <div class="flex items-start gap-3">
+                <div class="flex-shrink-0">
+                    <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-gray-900 text-sm mb-1">Add to Home Screen</h3>
+                    <p class="text-xs text-gray-600 mb-2">Tap the share button <span class="font-bold">□</span> then "Add to Home Screen"</p>
+                    <ol class="text-xs text-gray-600 space-y-1 mb-3 list-decimal list-inside">
+                        <li>Tap the share icon at the bottom</li>
+                        <li>Scroll and tap "Add to Home Screen"</li>
+                        <li>Tap "Add" to confirm</li>
+                    </ol>
+                    <button 
+                        onclick="dismissIOSBanner()"
+                        class="w-full font-sans text-xs font-semibold text-gray-600 hover:text-gray-900 px-4 py-2 rounded-lg transition-colors border border-gray-300"
+                    >
+                        Got it
+                    </button>
+                </div>
+                <button 
+                    onclick="dismissIOSBanner()"
+                    class="flex-shrink-0 text-gray-400 hover:text-gray-600 transition-colors"
+                    aria-label="Close"
+                >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="border-t border-black/10 mt-20 lg:mt-32 bg-white/50 backdrop-blur-sm">
