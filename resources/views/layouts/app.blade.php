@@ -16,7 +16,7 @@
     <title>@yield('title', 'SJ Treven - Author')</title>
     <meta name="title" content="@yield('meta_title', 'SJ Treven - Author | Literary Works Exploring Human Experience')">
     <meta name="description" content="@yield('meta_description', 'SJ Treven - Author website featuring literary works exploring human experience, resilience, and connection. Discover books on burnout, loneliness, masculinity, and more.')">
-    <meta name="keywords" content="@yield('meta_keywords', 'SJ Treven, author, books, literature, human experience, burnout, loneliness, masculinity, literary nonfiction, fantasy, The Human Reset, RyXXa')">
+    <meta name="keywords" content="@yield('meta_keywords', 'SJ Treven, author, books, literature, human experience, burnout, loneliness, masculinity, literary nonfiction, fantasy, The Human Reset')">
     <meta name="author" content="SJ Treven">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">

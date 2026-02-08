@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'Books - SJ Treven')
-@section('meta_title', 'Books by SJ Treven | The Human Reset, RyXXa, and More')
-@section('meta_description', 'Explore all books by SJ Treven including The Human Reset, RyXXa, This Is What America Has Become, The Legend of Ndike, He Never Said a Word, and Connected but Lonely.')
+@section('meta_title', 'Books by SJ Treven | The Human Reset and More')
+@section('meta_description', 'Explore all books by SJ Treven including The Human Reset, The Legend of Ndike, He Never Said a Word, and Connected but Lonely.')
 @section('og_title', 'Books by SJ Treven')
 @section('og_description', 'A collection of literary works exploring human experience, resilience, and connection.')
 @section('twitter_title', 'Books by SJ Treven')
@@ -111,136 +111,12 @@
                 </div>
             </article>
 
-            <!-- RyXXa - COMING SOON -->
-            <article 
-                x-data="{ synopsisOpen: false }"
-                x-intersect="synopsisOpen = false"
-                class="book-card bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
-                style="animation-delay: 0.2s"
-            >
-                <div class="p-6 sm:p-8 lg:p-10">
-                    <div class="mb-6">
-                        <img 
-                            src="{{ asset('uploads/Ryxxa.jpeg') }}" 
-                            alt="RyXXa book cover"
-                            class="book-cover w-full max-w-[280px] mx-auto shadow-2xl mb-6"
-                            loading="lazy"
-                        >
-                        <div class="text-center mb-4">
-                            <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 leading-tight">
-                                RyXXa
-                            </h2>
-                            <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-600 border-2 border-gray-400 bg-white px-4 py-2 rounded-full">
-                                Coming Soon
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <div class="text-gray-800 leading-relaxed">
-                        <p class="mb-5 font-medium text-base sm:text-lg">
-                            RyXXa is a book about the moment after everything falls apart — when progress stops, certainty disappears, and continuing feels heavier than quitting.
-                        </p>
-                        
-                        <button 
-                            @click="synopsisOpen = !synopsisOpen"
-                            class="font-sans text-sm font-semibold text-gray-900 hover:text-gray-700 underline underline-offset-4 transition-all duration-300 hover:scale-105 mb-4"
-                        >
-                            <span x-show="!synopsisOpen">Read full synopsis</span>
-                            <span x-show="synopsisOpen">Close synopsis</span>
-                        </button>
-                        
-                        <div 
-                            x-show="synopsisOpen"
-                            x-transition:enter="transition ease-out duration-500"
-                            x-transition:enter-start="opacity-0 translate-y-2"
-                            x-transition:enter-end="opacity-100 translate-y-0"
-                            x-transition:leave="transition ease-in duration-300"
-                            x-transition:leave-start="opacity-100 translate-y-0"
-                            x-transition:leave-end="opacity-0 translate-y-2"
-                            class="space-y-4 pt-6 border-t-2 border-gray-900/20 text-sm sm:text-base"
-                        >
-                            <p class="font-medium">
-                                It explores the quiet endurance of those who kept going without recognition, without momentum, and without proof that their effort would ever matter. This is not a story of success or transformation. It is about staying present when dreams fade, bodies fail, relationships fracture, and life refuses to move forward.
-                            </p>
-                            <p class="font-light">
-                                Through restrained, reflective chapters, RyXXa gives language to experiences often carried in silence: the weight of repeated disappointment, the pressure to remain functional while unraveling internally, and the strength required simply to stay. RyXXa is not a hero or a solution…
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- This Is What America Has Become - COMING SOON -->
-            <article 
-                x-data="{ synopsisOpen: false }"
-                x-intersect="synopsisOpen = false"
-                class="book-card bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
-                style="animation-delay: 0.3s"
-            >
-                <div class="p-6 sm:p-8 lg:p-10">
-                    <div class="mb-6">
-                        <img 
-                            src="{{ asset('uploads/WhatAmericaHasBecome.jpeg') }}" 
-                            alt="This Is What America Has Become book cover"
-                            class="book-cover w-full max-w-[280px] mx-auto shadow-2xl mb-6"
-                            loading="lazy"
-                        >
-                        <div class="text-center mb-4">
-                            <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 leading-tight">
-                                This Is What America Has Become
-                            </h2>
-                            <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-600 border-2 border-gray-400 bg-white px-4 py-2 rounded-full">
-                                Coming Soon
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <div class="text-gray-800 leading-relaxed">
-                        <p class="mb-5 font-medium text-base sm:text-lg">
-                            This Is What America Has Become examines a nation in gradual decline, unraveling not through a single crisis but through overlapping failures of trust, governance, economy, and shared identity.
-                        </p>
-                        
-                        <button 
-                            @click="synopsisOpen = !synopsisOpen"
-                            class="font-sans text-sm font-semibold text-gray-900 hover:text-gray-700 underline underline-offset-4 transition-all duration-300 hover:scale-105 mb-4"
-                        >
-                            <span x-show="!synopsisOpen">Read full synopsis</span>
-                            <span x-show="synopsisOpen">Close synopsis</span>
-                        </button>
-                        
-                        <div 
-                            x-show="synopsisOpen"
-                            x-transition:enter="transition ease-out duration-500"
-                            x-transition:enter-start="opacity-0 translate-y-2"
-                            x-transition:enter-end="opacity-100 translate-y-0"
-                            x-transition:leave="transition ease-in duration-300"
-                            x-transition:leave-start="opacity-100 translate-y-0"
-                            x-transition:leave-end="opacity-0 translate-y-2"
-                            class="space-y-4 pt-6 border-t-2 border-gray-900/20 text-sm sm:text-base"
-                        >
-                            <p class="font-medium">
-                                Through narrative storytelling and historical reflection, the book argues that America is divided by competing realities, paralyzed by political gridlock, hollowed by economic inequality, and weakened by the erosion of community and common truth.
-                            </p>
-                            <p class="font-light">
-                                The book explores how civic rituals endure while belief fades, how the American Dream has become fragile and unevenly accessible, and how institutions once trusted to serve the public now struggle for legitimacy. Grounded in the lived experiences of workers, veterans, families, and communities, it reveals the human cost of stagnation, isolation, and abandonment.
-                            </p>
-                            <p class="font-light">
-                                Tracing a self-reinforcing spiral of mistrust, inequality, and institutional decay, the book warns that no republic can endure without faith in its promises. Yet it resists despair, insisting that renewal remains possible if Americans choose courage, accountability, and collective responsibility over cynicism.
-                            </p>
-                            <p class="font-light">
-                                Neither partisan nor prescriptive, this book is a civic reckoning—asking whether America will continue reciting its ideals as ritual, or act to rebuild the trust and shared purpose required for the republic to endure.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
             <!-- The Legend of Ndike - COMING SOON -->
             <article 
                 x-data="{ synopsisOpen: false }"
                 x-intersect="synopsisOpen = false"
                 class="book-card bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
-                style="animation-delay: 0.4s"
+                style="animation-delay: 0.2s"
             >
                 <div class="p-6 sm:p-8 lg:p-10">
                     <div class="mb-6">
@@ -312,7 +188,7 @@
                 x-data="{ synopsisOpen: false }"
                 x-intersect="synopsisOpen = false"
                 class="book-card bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
-                style="animation-delay: 0.5s"
+                style="animation-delay: 0.3s"
             >
                 <div class="p-6 sm:p-8 lg:p-10">
                     <div class="mb-6">
@@ -377,7 +253,7 @@
                 x-data="{ synopsisOpen: false }"
                 x-intersect="synopsisOpen = false"
                 class="book-card bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
-                style="animation-delay: 0.6s"
+                style="animation-delay: 0.4s"
             >
                 <div class="p-6 sm:p-8 lg:p-10">
                     <div class="mb-6">
