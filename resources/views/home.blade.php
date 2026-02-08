@@ -74,6 +74,46 @@
                     </div>
                 </div>
             </article>
+
+            <!-- Connected but Lonely - COMING SOON -->
+            <article 
+                x-data="{ synopsisOpen: false }"
+                x-intersect="synopsisOpen = false"
+                class="book-card bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
+                style="animation-delay: 0.2s"
+            >
+                <div class="p-6 sm:p-8 lg:p-10">
+                    <div class="mb-6">
+                        <img 
+                            src="{{ asset('uploads/connectedButLonely.jpeg') }}" 
+                            alt="Connected but Lonely book cover"
+                            class="book-cover w-full max-w-[280px] mx-auto shadow-2xl mb-6"
+                            loading="lazy"
+                        >
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 leading-tight">
+                                Connected but Lonely
+                            </h3>
+                            <p class="text-sm text-gray-500 font-light italic mb-3">
+                                Why You Feel Alone and How to Truly Belong
+                            </p>
+                            <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-600 border-2 border-gray-400 bg-white px-4 py-2 rounded-full">
+                                Coming Soon
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-gray-800 leading-relaxed">
+                        <p class="mb-5 font-medium text-base sm:text-lg">
+                            Connected but Lonely: Why You Feel Alone and How to Truly Belong is a powerful exploration of one of the quietest epidemics of our time: loneliness in an age of constant connection.
+                        </p>
+                        
+                        <a href="{{ route('books') }}" class="inline-block font-sans text-sm font-semibold text-gray-900 hover:text-gray-700 underline underline-offset-4 transition-all duration-300 hover:scale-105">
+                            View all books →
+                        </a>
+                    </div>
+                </div>
+            </article>
         </div>
     </section>
 @endsection
