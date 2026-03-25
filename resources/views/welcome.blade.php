@@ -121,13 +121,13 @@
                             class="space-y-4 pt-6 border-t border-gray-100 text-sm"
                         >
                             <p class="font-light">
-                                Through a series of intimate, scene-driven vignettes, the book follows a composite figure—He—as he moves through work, love, fatherhood, loss, and responsibility without ever voicing what hurts.
+                                Through a series of intimate, scene-driven vignettes, the book follows a composite figure He as he moves through work, love, fatherhood, loss, and responsibility without ever voicing what hurts.
                             </p>
                             <p class="font-light">
                                 Each chapter reveals how silence is learned early and reinforced by culture, turning humor, endurance, and productivity into masks that conceal loneliness, fear, grief, and doubt. What appears as stability on the outside slowly becomes isolation within.
                             </p>
                             <p class="font-light">
-                                Rather than offering advice or easy solutions, the book bears witness to the moments where silence nearly destroys—and the quiet, human moments where it finally breaks. A late-night message. A single honest sentence. A breath taken out loud.
+                                Rather than offering advice or easy solutions, the book bears witness to the moments where silence nearly destroys and the quiet, human moments where it finally breaks. A late-night message. A single honest sentence. A breath taken out loud.
                             </p>
                             <p class="font-light">
                                 Ultimately, He Never Said a Word reframes masculinity, suggesting that true strength is not found in holding everything in, but in the courage to speak, to be seen, and to let someone else carry part of the weight.
@@ -165,7 +165,7 @@
                     
                     <div class="text-gray-700 leading-relaxed">
                         <p class="mb-5 font-light text-base">
-                            Where Harry Potter introduced a hidden magical world, The Legend of Ndike reveals something closer—and more dangerous: the magic buried inside the real one.
+                            Where Harry Potter introduced a hidden magical world, The Legend of Ndike reveals something closer and more dangerous: the magic buried inside the real one.
                         </p>
                         
                         <button 
@@ -190,20 +190,20 @@
                                 At St. Magnus Magnus Academy, an ancient boarding school built on tradition and discipline, boys are trained to lead and girls are taught to stay quiet. Silence is praised as excellence. Questioning the system is quietly punished.
                             </p>
                             <p class="font-light">
-                                When twelve-year-old Ndike arrives, she immediately notices the imbalance—the iron gates carved with the faces of past champions, all boys; teachers who reward confidence in boys and call it disruption in girls; classmates who mock her simply for speaking her name.
+                                When twelve-year-old Ndike arrives, she immediately notices the imbalance, the iron gates carved with the faces of past champions, all boys; teachers who reward confidence in boys and call it disruption in girls; classmates who mock her simply for speaking her name.
                             </p>
                             <p class="font-light">
                                 Unlike Harry Potter, Ndike is not invited into magic.<br>
                                 She becomes it.
                             </p>
                             <p class="font-light">
-                                As the school prepares for its most celebrated tradition—the Festival of Masks—Ndike begins to experience unsettling moments: words appearing in her notebook, lights flickering when she's humiliated, objects responding when she speaks the truth. With the help of her loyal friend Amara, she uncovers evidence of a girl erased from the school's history.
+                                As the school prepares for its most celebrated tradition, the Festival of Masks, Ndike begins to experience unsettling moments: words appearing in her notebook, lights flickering when she's humiliated, objects responding when she speaks the truth. With the help of her loyal friend Amara, she uncovers evidence of a girl erased from the school's history.
                             </p>
                             <p class="font-light">
-                                When Ndike is publicly humiliated at the Festival and refuses to apologize, her defiance awakens a power that doesn't destroy—but reveals. Labeled dangerous, she is put on trial before the entire school, where her voice sparks a reckoning that forces tradition itself to change.
+                                When Ndike is publicly humiliated at the Festival and refuses to apologize, her defiance awakens a power that doesn't destroy but reveals. Labeled dangerous, she is put on trial before the entire school, where her voice sparks a reckoning that forces tradition itself to change.
                             </p>
                             <p class="font-light">
-                                The Legend of Ndike is a bold middle-grade fantasy about voice, justice, and the power of truth—designed to grow with its readers and resonate worldwide.
+                                The Legend of Ndike is a bold middle-grade fantasy about voice, justice, and the power of truth, designed to grow with its readers and resonate worldwide.
                             </p>
                         </div>
                     </div>
@@ -321,13 +321,13 @@
                             class="space-y-4 pt-6 border-t border-gray-100 text-sm"
                         >
                             <p class="font-light">
-                                We live in a world where we are always online, always reachable, always surrounded by voices—yet so many of us feel unseen, unheard, and deeply alone. Through psychological insight, emotional storytelling, and honest reflection, this book unpacks why modern connection often leaves us emptier than before, and why belonging cannot be built on likes, messages, or surface-level interactions.
+                                We live in a world where we are always online, always reachable, always surrounded by voices yet so many of us feel unseen, unheard, and deeply alone. Through psychological insight, emotional storytelling, and honest reflection, this book unpacks why modern connection often leaves us emptier than before, and why belonging cannot be built on likes, messages, or surface-level interactions.
                             </p>
                             <p class="font-light">
-                                S.J. TreveN takes the reader on a transformative journey—examining how technology, social expectations, comparison, trauma, and unspoken emotional needs fracture our sense of self and disconnect us from others. More importantly, the book shows that loneliness is not a personal failure, but a human signal: a call to return to authenticity, vulnerability, and meaningful connection.
+                                S.J. TreveN takes the reader on a transformative journey, examining how technology, social expectations, comparison, trauma, and unspoken emotional needs fracture our sense of self and disconnect us from others. More importantly, the book shows that loneliness is not a personal failure, but a human signal: a call to return to authenticity, vulnerability, and meaningful connection.
                             </p>
                             <p class="font-light">
-                                This is not a book about "fixing" yourself. It is a book about remembering who you are, understanding why you feel the way you do, and learning how to create relationships—starting with yourself—that are rooted in truth, presence, and genuine belonging.
+                                This is not a book about "fixing" yourself. It is a book about remembering who you are, understanding why you feel the way you do, and learning how to create relationships, starting with yourself, that are rooted in truth, presence, and genuine belonging.
                             </p>
                             <p class="font-light">
                                 For anyone who has ever felt alone in a crowded room, invisible online, or disconnected despite being surrounded by people, Connected but Lonely offers clarity, compassion, and a path back to feeling truly seen.

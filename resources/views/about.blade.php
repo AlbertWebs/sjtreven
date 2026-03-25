@@ -25,11 +25,11 @@
                 </p>
                 
                 <p class="font-medium">
-                    The work spans multiple genres—from literary nonfiction that examines the silent emotional lives of men, to middle-grade fantasy that empowers young voices, to explorations of burnout, loneliness, and civic responsibility. What unites these diverse works is a commitment to truth-telling, emotional honesty, and the belief that stories can create space for healing and understanding.
+                    The work spans multiple genres, from literary nonfiction that examines the silent emotional lives of men, to middle-grade fantasy that empowers young voices, to explorations of burnout, loneliness, and civic responsibility. What unites these diverse works is a commitment to truth-telling, emotional honesty, and the belief that stories can create space for healing and understanding.
                 </p>
                 
                 <p class="font-medium">
-                    Treven writes for anyone who has ever felt unseen, unheard, or alone—offering not solutions, but presence. The books are quiet companions for those navigating difficult terrain, whether that's the weight of silence, the exhaustion of constant productivity, or the search for genuine belonging in an age of surface-level connection.
+                    Treven writes for anyone who has ever felt unseen, unheard, or alone, offering not solutions, but presence. The books are quiet companions for those navigating difficult terrain, whether that's the weight of silence, the exhaustion of constant productivity, or the search for genuine belonging in an age of surface-level connection.
                 </p>
                 
                 <p class="font-bold italic text-gray-900 pt-4 text-lg sm:text-xl">
