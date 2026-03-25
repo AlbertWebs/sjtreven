@@ -75,7 +75,7 @@
     <!-- Books Section -->
     <main class="max-w-7xl mx-auto px-8 lg:px-12 pb-24 lg:pb-32">
         <div class="book-grid">
-            <!-- The Human Reset - OUT NOW -->
+            <!-- He Never Said a Word - OUT NOW -->
             <article 
                 x-data="{ synopsisOpen: false }"
                 class="book-card bg-white rounded-sm shadow-sm border border-gray-100 overflow-hidden"
@@ -83,13 +83,13 @@
                 <div class="p-8 lg:p-10">
                     <div class="mb-6">
                         <img 
-                            src="{{ asset('uploads/humanReset.jpeg') }}" 
-                            alt="The Human Reset book cover"
+                            src="{{ asset('uploads/heNeverSaidaWord.jpeg') }}" 
+                            alt="He Never Said a Word book cover"
                             class="book-cover w-full max-w-[280px] mx-auto shadow-xl mb-6"
                         >
                         <div class="text-center mb-4">
                             <h2 class="text-2xl lg:text-3xl font-light text-gray-900 mb-3 leading-tight">
-                                The Human Reset
+                                He Never Said a Word
                             </h2>
                             <span class="inline-block text-[9px] font-medium uppercase tracking-widest text-gray-700 border border-gray-300 bg-gray-50 px-3 py-1.5">
                                 Out Now
@@ -99,7 +99,7 @@
                     
                     <div class="text-gray-700 leading-relaxed">
                         <p class="mb-5 font-light text-base">
-                            The Human Reset is a call to a world that has confused exhaustion with success and productivity with human worth.
+                            He Never Said a Word is a literary nonfiction exploration of the silent emotional lives of men who are praised for their strength while quietly unraveling inside.
                         </p>
                         
                         <button 
@@ -121,29 +121,20 @@
                             class="space-y-4 pt-6 border-t border-gray-100 text-sm"
                         >
                             <p class="font-light">
-                                Burnout is no longer an individual problem. It is the predictable outcome of a system that rewards overwork, glorifies hustle, and treats rest as weakness. This book challenges the belief that burnout is a personal failure and reframes it as a system failure.
+                                Through a series of intimate, scene-driven vignettes, the book follows a composite figure—He—as he moves through work, love, fatherhood, loss, and responsibility without ever voicing what hurts.
                             </p>
                             <p class="font-light">
-                                At the center of this crisis is an addiction to productivity. Achievement and constant busyness activate the brain's reward system, slowly turning ambition into identity. Sleep stops restoring. Creativity fades. Relationships suffer. Life becomes performance rather than experience.
+                                Each chapter reveals how silence is learned early and reinforced by culture, turning humor, endurance, and productivity into masks that conceal loneliness, fear, grief, and doubt. What appears as stability on the outside slowly becomes isolation within.
                             </p>
                             <p class="font-light">
-                                The book exposes how burnout hides behind competence, perfectionism, and success. Promotions and achievements often increase pressure instead of peace, trapping people on a ladder where the goalposts never stop moving.
+                                Rather than offering advice or easy solutions, the book bears witness to the moments where silence nearly destroys—and the quiet, human moments where it finally breaks. A late-night message. A single honest sentence. A breath taken out loud.
                             </p>
                             <p class="font-light">
-                                The Human Reset dismantles hustle culture and its core myths: that rest must be earned, that more hours equal more value, and that sacrifice proves worth. It shows how exhaustion benefits systems that depend on constant availability and compliance.
+                                Ultimately, He Never Said a Word reframes masculinity, suggesting that true strength is not found in holding everything in, but in the courage to speak, to be seen, and to let someone else carry part of the weight.
                             </p>
                             <p class="font-light">
-                                Readers learn to recognize the silent signs of burnout before collapse occurs, including emotional numbness, irritability, brain fog, withdrawal, self doubt, and reliance on stimulants. These are not weaknesses. They are warning signals.
-                            </p>
-                            <p class="font-light">
-                                Recovery begins with boundaries. It begins with learning to say no. No to guilt driven yeses. No to endless demands. No to a life built on self abandonment.
-                            </p>
-                            <p class="font-light">
-                                Ultimately, The Human Reset offers a path back to humanity. One where rest is required, worth is not tied to output, and success includes health, presence, and meaning.
-                            </p>
-                            <p class="font-normal italic text-gray-800 pt-2">
-                                The reset is not about escaping life.<br>
-                                It is about reclaiming it.
+                                He never said a word.<br>
+                                Until he had to.
                             </p>
                         </div>
                     </div>
@@ -219,7 +210,7 @@
                 </div>
             </article>
 
-            <!-- He Never Said a Word - COMING SOON -->
+            <!-- The Human Reset - COMING SOON -->
             <article 
                 x-data="{ synopsisOpen: false }"
                 class="book-card bg-white rounded-sm shadow-sm border border-gray-100 overflow-hidden"
@@ -227,13 +218,13 @@
                 <div class="p-8 lg:p-10">
                     <div class="mb-6">
                         <img 
-                            src="{{ asset('uploads/heNeverSaidaWord.jpeg') }}" 
-                            alt="He Never Said a Word book cover"
+                            src="{{ asset('uploads/humanReset.jpeg') }}" 
+                            alt="The Human Reset book cover"
                             class="book-cover w-full max-w-[280px] mx-auto shadow-xl mb-6"
                         >
                         <div class="text-center mb-4">
                             <h2 class="text-2xl lg:text-3xl font-light text-gray-900 mb-3 leading-tight">
-                                He Never Said a Word
+                                The Human Reset
                             </h2>
                             <span class="inline-block text-[9px] font-medium uppercase tracking-widest text-gray-400 border border-gray-200 bg-white px-3 py-1.5">
                                 Coming Soon
@@ -243,7 +234,7 @@
                     
                     <div class="text-gray-700 leading-relaxed">
                         <p class="mb-5 font-light text-base">
-                            He Never Said a Word is a literary nonfiction exploration of the silent emotional lives of men who are praised for their strength while quietly unraveling inside.
+                            The Human Reset is a call to a world that has confused exhaustion with success and productivity with human worth.
                         </p>
                         
                         <button 
@@ -265,16 +256,16 @@
                             class="space-y-4 pt-6 border-t border-gray-100 text-sm"
                         >
                             <p class="font-light">
-                                Through a series of intimate, scene-driven vignettes, the book follows a composite figure—He—as he moves through work, love, fatherhood, loss, and responsibility without ever voicing what hurts.
+                                Burnout is no longer an individual problem. It is the predictable outcome of a system that rewards overwork, glorifies hustle, and treats rest as weakness. This book challenges the belief that burnout is a personal failure and reframes it as a system failure.
                             </p>
                             <p class="font-light">
-                                Each chapter reveals how silence is learned early and reinforced by culture, turning humor, endurance, and productivity into masks that conceal loneliness, fear, grief, and doubt. What appears as stability on the outside slowly becomes isolation within. Over time, that silence exacts a heavy cost—on the body, on relationships, and on a man's sense of self.
+                                At the center of this crisis is an addiction to productivity. Achievement and constant busyness activate the brain's reward system, slowly turning ambition into identity. Sleep stops restoring. Creativity fades. Relationships suffer. Life becomes performance rather than experience.
                             </p>
                             <p class="font-light">
-                                Rather than offering advice or easy solutions, the book bears witness to the moments where silence nearly destroys—and the quiet, human moments where it finally breaks. A late-night message. A single honest sentence. A breath taken out loud. In those moments, something shifts.
+                                The book exposes how burnout hides behind competence, perfectionism, and success. Promotions and achievements often increase pressure instead of peace, trapping people on a ladder where the goalposts never stop moving.
                             </p>
                             <p class="font-light">
-                                Ultimately, He Never Said a Word reframes masculinity, suggesting that true strength is not found in holding everything in, but in the courage to speak, to be seen, and to let someone else carry part of the weight.
+                                Ultimately, The Human Reset offers a path back to humanity. One where rest is required, worth is not tied to output, and success includes health, presence, and meaning.
                             </p>
                         </div>
                     </div>
