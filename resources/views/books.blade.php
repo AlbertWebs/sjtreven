@@ -44,7 +44,7 @@
                                     Out Now
                                 </span>
                                 <a 
-                                    href="https://www.amazon.com/dp/B0XXXXXXXXX" 
+                                    href="https://www.amazon.com/dp/B0GTW4KQ9T" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     class="inline-flex items-center gap-2 font-sans text-xs sm:text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"

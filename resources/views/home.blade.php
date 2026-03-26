@@ -44,9 +44,22 @@
                             <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 leading-tight">
                                 He Never Said a Word
                             </h3>
-                            <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-900 border-2 border-gray-900 bg-yellow-200 px-4 py-2 rounded-full">
-                                Out Now
-                            </span>
+                            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                                <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-900 border-2 border-gray-900 bg-yellow-200 px-4 py-2 rounded-full">
+                                    Out Now
+                                </span>
+                                <a
+                                    href="https://www.amazon.com/dp/B0GTW4KQ9T"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-2 font-sans text-xs sm:text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                                >
+                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path d="M23.27 21.18l-2.73-2.73.98-2.19L22.98 13l-2.73-2.73-2.19.98L16.82 9l-2.73 2.73.98 2.19L13.02 16l2.73 2.73 2.19-.98L19.18 21l2.73-2.73-2.19-.98.55-1.11zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                    </svg>
+                                    Order on Amazon
+                                </a>
+                            </div>
                         </div>
                     </div>
                     
