@@ -96,7 +96,7 @@
             <article 
                 x-data="{ synopsisOpen: false }"
                 x-intersect="synopsisOpen = false"
-                class="book-card bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
+                class="book-card hidden bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
                 style="animation-delay: 0.2s"
             >
                 <div class="p-6 sm:p-8 lg:p-10">
@@ -168,7 +168,7 @@
             <article 
                 x-data="{ synopsisOpen: false }"
                 x-intersect="synopsisOpen = false"
-                class="book-card bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
+                class="book-card hidden bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
                 style="animation-delay: 0.3s"
             >
                 <div class="p-6 sm:p-8 lg:p-10">
@@ -233,7 +233,7 @@
             <article 
                 x-data="{ synopsisOpen: false }"
                 x-intersect="synopsisOpen = false"
-                class="book-card bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
+                class="book-card hidden bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
                 style="animation-delay: 0.4s"
             >
                 <div class="p-6 sm:p-8 lg:p-10">
