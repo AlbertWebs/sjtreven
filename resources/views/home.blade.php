@@ -64,6 +64,75 @@
                     </div>
                 </div>
             </article>
+
+            <!-- The Legend of Ndike - COMING SOON -->
+            <article 
+                x-data="{ synopsisOpen: false }"
+                x-intersect="synopsisOpen = false"
+                class="book-card bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
+                style="animation-delay: 0.2s"
+            >
+                <div class="p-6 sm:p-8 lg:p-10">
+                    <div class="mb-6">
+                        <img 
+                            src="{{ asset('uploads/theLegendofNdike.jpeg') }}" 
+                            alt="The Legend of Ndike book cover"
+                            class="book-cover w-full max-w-[280px] mx-auto shadow-2xl mb-6"
+                            loading="lazy"
+                        >
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 leading-tight">
+                                The Legend of Ndike
+                            </h3>
+                            <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-600 border-2 border-gray-400 bg-white px-4 py-2 rounded-full">
+                                Coming Soon
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-gray-800 leading-relaxed">
+                        <p class="mb-5 font-medium text-base sm:text-lg">
+                            Where Harry Potter introduced us to a hidden magical world, The Legend of Ndike reveals the magic and injustice within our own.
+                        </p>
+
+                        <button 
+                            @click="synopsisOpen = !synopsisOpen"
+                            class="font-sans text-sm font-semibold text-gray-900 hover:text-gray-700 underline underline-offset-4 transition-all duration-300 hover:scale-105 mb-4"
+                        >
+                            <span x-show="!synopsisOpen">Read full synopsis</span>
+                            <span x-show="synopsisOpen">Close synopsis</span>
+                        </button>
+
+                        <div 
+                            x-show="synopsisOpen"
+                            x-transition:enter="transition ease-out duration-500"
+                            x-transition:enter-start="opacity-0 translate-y-2"
+                            x-transition:enter-end="opacity-100 translate-y-0"
+                            x-transition:leave="transition ease-in duration-300"
+                            x-transition:leave-start="opacity-100 translate-y-0"
+                            x-transition:leave-end="opacity-0 translate-y-2"
+                            class="space-y-4 pt-6 border-t-2 border-gray-900/20 text-sm sm:text-base"
+                        >
+                            <p class="font-medium">
+                                At St. Magnus Academy, boys are encouraged to lead while girls are taught to take up less space. Eleven year old Ndike sees what others have learned to accept and refuses to stay quiet.
+                            </p>
+                            <p class="font-light">
+                                But St. Magnus is more than a school. It is the world in miniature, shaped by old rules, unequal expectations, and traditions passed down without question.
+                            </p>
+                            <p class="font-light">
+                                When Ndike challenges that world, something extraordinary awakens.
+                            </p>
+                            <p class="font-light">
+                                Unlike Harry Potter, Ndike isn’t invited into magic.<br>
+                                She becomes it.
+                            </p>
+                            <p class="font-light">
+                                For children, it is an adventure about finding your voice. For adults, it is a story about the systems we inherit, the ones we accept, and the courage it takes to change them.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </div>
     </section>
 @endsection
