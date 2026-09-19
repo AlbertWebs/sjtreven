@@ -92,11 +92,11 @@
                 </div>
             </article>
 
-            <!-- The Legend of Ndike - COMING SOON -->
+            <!-- The Legend of Ndike - OUT NOW -->
             <article 
                 x-data="{ synopsisOpen: false }"
                 x-intersect="synopsisOpen = false"
-                class="book-card hidden bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
+                class="book-card bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
                 style="animation-delay: 0.2s"
             >
                 <div class="p-6 sm:p-8 lg:p-10">
@@ -111,8 +111,8 @@
                             <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 leading-tight">
                                 The Legend of Ndike
                             </h2>
-                            <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-600 border-2 border-gray-400 bg-white px-4 py-2 rounded-full">
-                                Coming Soon
+                            <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-900 border-2 border-gray-900 bg-yellow-200 px-4 py-2 rounded-full">
+                                Out Now
                             </span>
                         </div>
                     </div>

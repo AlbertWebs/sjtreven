@@ -65,7 +65,7 @@
                 </div>
             </article>
 
-            <!-- The Legend of Ndike - COMING SOON -->
+            <!-- The Legend of Ndike - OUT NOW -->
             <article 
                 x-data="{ synopsisOpen: false }"
                 x-intersect="synopsisOpen = false"
@@ -84,8 +84,8 @@
                             <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 leading-tight">
                                 The Legend of Ndike
                             </h3>
-                            <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-600 border-2 border-gray-400 bg-white px-4 py-2 rounded-full">
-                                Coming Soon
+                            <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-900 border-2 border-gray-900 bg-yellow-200 px-4 py-2 rounded-full">
+                                Out Now
                             </span>
                         </div>
                     </div>

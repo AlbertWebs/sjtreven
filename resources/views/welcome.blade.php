@@ -154,7 +154,7 @@
                 </div>
             </article>
 
-            <!-- The Legend of Ndike - COMING SOON -->
+            <!-- The Legend of Ndike - OUT NOW -->
             <article 
                 x-data="{ synopsisOpen: false }"
                 class="book-card bg-white rounded-sm shadow-sm border border-gray-100 overflow-hidden"
@@ -170,8 +170,8 @@
                             <h2 class="text-2xl lg:text-3xl font-light text-gray-900 mb-3 leading-tight">
                                 The Legend of Ndike
                             </h2>
-                            <span class="inline-block text-[9px] font-medium uppercase tracking-widest text-gray-400 border border-gray-200 bg-white px-3 py-1.5">
-                                Coming Soon
+                            <span class="inline-block text-[9px] font-medium uppercase tracking-widest text-gray-700 border border-gray-300 bg-gray-50 px-3 py-1.5">
+                                Out Now
                             </span>
                         </div>
                     </div>
