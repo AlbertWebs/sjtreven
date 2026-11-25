@@ -525,10 +525,6 @@
                         <span class="nav-icon">📝</span>
                         <span>Articles</span>
                     </a>
-                    <a href="{{ route('apps') }}" class="nav-link font-sans text-sm font-semibold text-gray-900 {{ request()->routeIs('apps') ? 'active' : '' }}">
-                        <span class="nav-icon">📱</span>
-                        <span>Apps</span>
-                    </a>
                     <a href="{{ route('contacts') }}" class="nav-link font-sans text-sm font-semibold text-gray-900 {{ request()->routeIs('contacts') ? 'active' : '' }}">
                         <span class="nav-icon">✉️</span>
                         <span>Contact</span>
@@ -574,10 +570,6 @@
                 <a href="{{ route('articles') }}" class="flex items-center gap-3 px-4 py-3 rounded-lg font-sans text-sm font-semibold text-gray-900 hover:bg-white/30 transition-all duration-300 hover:translate-x-2 hover:scale-105 {{ request()->routeIs('articles') ? 'bg-white/40 font-bold' : '' }}">
                     <span class="text-lg">📝</span>
                     <span>Articles & Guides</span>
-                </a>
-                <a href="{{ route('apps') }}" class="flex items-center gap-3 px-4 py-3 rounded-lg font-sans text-sm font-semibold text-gray-900 hover:bg-white/30 transition-all duration-300 hover:translate-x-2 hover:scale-105 {{ request()->routeIs('apps') ? 'bg-white/40 font-bold' : '' }}">
-                    <span class="text-lg">📱</span>
-                    <span>Apps</span>
                 </a>
                 <a href="{{ route('contacts') }}" class="flex items-center gap-3 px-4 py-3 rounded-lg font-sans text-sm font-semibold text-gray-900 hover:bg-white/30 transition-all duration-300 hover:translate-x-2 hover:scale-105 {{ request()->routeIs('contacts') ? 'bg-white/40 font-bold' : '' }}">
                     <span class="text-lg">✉️</span>
