@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
 
 Route::get('/', function () {
     return view('home');
@@ -13,6 +14,12 @@ Route::get('/about', function () {
 Route::get('/books', function () {
     return view('books');
 })->name('books');
+
+Route::get('/books/{slug}', [BookController::class, 'show'])->name('books.show');
+
+Route::get('/sitemap.xml', function () {
+    return response()->view('sitemap', [], 200, ['Content-Type' => 'application/xml; charset=UTF-8']);
+})->name('sitemap');
 
 Route::get('/apps', function () {
     return view('apps');

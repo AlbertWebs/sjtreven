@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Home - SJ Treven')
-@section('meta_title', 'SJ Treven - Author | Literary Works Exploring Human Experience')
-@section('meta_description', 'SJ Treven - Author website featuring literary works exploring human experience, resilience, and connection. Discover books on burnout, loneliness, masculinity, and more.')
+@section('title', 'SJ Treven, Author | Books and Literary Works')
+@section('meta_title', 'SJ Treven, Author | Books and Literary Works')
+@section('meta_description', 'Discover books by author SJ Treven: He Never Said a Word, The Legend of Ndike, The Human Reset, and Connected but Lonely.')
 @section('og_title', 'SJ Treven - Author | Literary Works')
 @section('og_description', 'Exploring the quiet spaces between words, where meaning lives and stories breathe.')
 @section('twitter_title', 'SJ Treven - Author')
@@ -17,6 +17,12 @@
             </h1>
             <p class="text-lg sm:text-xl lg:text-2xl text-gray-800 leading-relaxed font-medium max-w-2xl">
                 Exploring the quiet spaces between words, where meaning lives and stories breathe.
+            </p>
+            <p class="mt-5 max-w-3xl text-base sm:text-lg leading-relaxed text-gray-800">
+                Explore books by SJ Treven, including <a class="font-semibold underline underline-offset-4" href="{{ route('books.show', 'he-never-said-a-word') }}">He Never Said a Word</a>,
+                <a class="font-semibold underline underline-offset-4" href="{{ route('books.show', 'the-legend-of-ndike') }}">The Legend of Ndike</a>,
+                <a class="font-semibold underline underline-offset-4" href="{{ route('books.show', 'the-human-reset') }}">The Human Reset</a>, and
+                <a class="font-semibold underline underline-offset-4" href="{{ route('books.show', 'connected-but-lonely') }}">Connected but Lonely</a>.
             </p>
         </div>
     </section>
@@ -42,7 +48,7 @@
                         >
                         <div class="text-center mb-4">
                             <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 leading-tight">
-                                He Never Said a Word
+                                <a href="{{ route('books.show', 'he-never-said-a-word') }}" class="hover:underline underline-offset-4">He Never Said a Word</a>
                             </h3>
                             <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
                                 <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-900 border-2 border-gray-900 bg-yellow-200 px-4 py-2 rounded-full">
@@ -82,7 +88,7 @@
                         >
                         <div class="text-center mb-4">
                             <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 leading-tight">
-                                The Legend of Ndike
+                                <a href="{{ route('books.show', 'the-legend-of-ndike') }}" class="hover:underline underline-offset-4">The Legend of Ndike</a>
                             </h3>
                             <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-900 border-2 border-gray-900 bg-yellow-200 px-4 py-2 rounded-full">
                                 Out Now

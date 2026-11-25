@@ -5,6 +5,10 @@
 
     RewriteEngine On
 
+    # Keep all public URLs on the canonical www host.
+    RewriteCond %{HTTP_HOST} ^sjtreven\.com$ [NC]
+    RewriteRule ^ https://www.sjtreven.com%{REQUEST_URI} [R=301,L]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

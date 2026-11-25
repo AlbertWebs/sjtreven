@@ -14,33 +14,52 @@
     
     <!-- Primary Meta Tags / SEO -->
     <title>@yield('title', 'SJ Treven - Author')</title>
-    <meta name="title" content="@yield('meta_title', 'SJ Treven - Author | Literary Works Exploring Human Experience')">
-    <meta name="description" content="@yield('meta_description', 'SJ Treven - Author website featuring literary works exploring human experience, resilience, and connection. Discover books on burnout, loneliness, masculinity, and more.')">
-    <meta name="keywords" content="@yield('meta_keywords', 'SJ Treven, author, books, literature, human experience, burnout, loneliness, masculinity, literary nonfiction, fantasy, The Human Reset')">
+    <meta name="description" content="@yield('meta_description', 'Explore books by SJ Treven, including He Never Said a Word, The Legend of Ndike, The Human Reset, and Connected but Lonely.')">
     <meta name="author" content="SJ Treven">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
+    <meta name="robots" content="@yield('robots', 'index, follow')">
+    <link rel="canonical" href="@yield('canonical_url', 'https://www.sjtreven.com'.request()->getPathInfo())">
     
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:url" content="@yield('canonical_url', 'https://www.sjtreven.com'.request()->getPathInfo())">
     <meta property="og:title" content="@yield('og_title', 'SJ Treven - Author | Literary Works')">
     <meta property="og:description" content="@yield('og_description', 'Exploring the quiet spaces between words, where meaning lives and stories breathe.')">
-    <meta property="og:image" content="@yield('og_image', url(asset('favicon/icon.jpeg')))">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="SJ Treven - Author">
+    <meta property="og:image" content="@yield('og_image', 'https://www.sjtreven.com/favicon/icon.jpeg')">
+    <meta property="og:image:alt" content="@yield('og_image_alt', 'SJ Treven - Author')">
     <meta property="og:site_name" content="SJ Treven">
     <meta property="og:locale" content="en_US">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="{{ url()->current() }}">
+    <meta name="twitter:url" content="@yield('canonical_url', 'https://www.sjtreven.com'.request()->getPathInfo())">
     <meta name="twitter:title" content="@yield('twitter_title', 'SJ Treven - Author')">
     <meta name="twitter:description" content="@yield('twitter_description', 'Exploring the quiet spaces between words, where meaning lives and stories breathe.')">
     <meta name="twitter:image" content="@yield('twitter_image', url(asset('favicon/icon.jpeg')))">
-    <meta name="twitter:image:alt" content="SJ Treven - Author">
+    <meta name="twitter:image:alt" content="@yield('og_image_alt', 'SJ Treven - Author')">
+
+    <script type="application/ld+json">@json([
+        '@context' => 'https://schema.org',
+        '@graph' => [
+            [
+                '@type' => 'WebSite',
+                '@id' => 'https://www.sjtreven.com/#website',
+                'url' => 'https://www.sjtreven.com/',
+                'name' => 'SJ Treven',
+                'publisher' => ['@id' => 'https://www.sjtreven.com/#author'],
+                'inLanguage' => 'en',
+            ],
+            [
+                '@type' => 'Person',
+                '@id' => 'https://www.sjtreven.com/#author',
+                'name' => 'SJ Treven',
+                'url' => 'https://www.sjtreven.com/about',
+                'mainEntityOfPage' => 'https://www.sjtreven.com/about',
+                'jobTitle' => 'Author',
+                'knowsAbout' => ['Literary nonfiction', 'Fiction', 'Burnout', 'Belonging', 'Resilience'],
+            ],
+        ],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE)</script>
+    @yield('structured_data')
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">

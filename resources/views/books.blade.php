@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Books - SJ Treven')
-@section('meta_title', 'Books by SJ Treven | The Human Reset and More')
-@section('meta_description', 'Explore all books by SJ Treven including The Human Reset, The Legend of Ndike, He Never Said a Word, and Connected but Lonely.')
+@section('title', 'Books by SJ Treven | Fiction and Literary Nonfiction')
+@section('meta_title', 'Books by SJ Treven | Fiction and Literary Nonfiction')
+@section('meta_description', 'Browse all books by author SJ Treven: He Never Said a Word, The Legend of Ndike, The Human Reset, and Connected but Lonely. Read each book’s synopsis and status.')
 @section('og_title', 'Books by SJ Treven')
 @section('og_description', 'A collection of literary works exploring human experience, resilience, and connection.')
 @section('twitter_title', 'Books by SJ Treven')
@@ -37,7 +37,7 @@
                         >
                         <div class="text-center mb-4">
                             <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 leading-tight">
-                                He Never Said a Word
+                                <a href="{{ route('books.show', 'he-never-said-a-word') }}" class="hover:underline underline-offset-4">He Never Said a Word</a>
                             </h2>
                             <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
                                 <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-900 border-2 border-gray-900 bg-yellow-200 px-4 py-2 rounded-full">
@@ -109,7 +109,7 @@
                         >
                         <div class="text-center mb-4">
                             <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 leading-tight">
-                                The Legend of Ndike
+                                <a href="{{ route('books.show', 'the-legend-of-ndike') }}" class="hover:underline underline-offset-4">The Legend of Ndike</a>
                             </h2>
                             <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-900 border-2 border-gray-900 bg-yellow-200 px-4 py-2 rounded-full">
                                 Out Now
@@ -168,7 +168,7 @@
             <article 
                 x-data="{ synopsisOpen: false }"
                 x-intersect="synopsisOpen = false"
-                class="book-card hidden bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
+                class="book-card bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
                 style="animation-delay: 0.3s"
             >
                 <div class="p-6 sm:p-8 lg:p-10">
@@ -181,7 +181,7 @@
                         >
                         <div class="text-center mb-4">
                             <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 leading-tight">
-                                The Human Reset
+                                <a href="{{ route('books.show', 'the-human-reset') }}" class="hover:underline underline-offset-4">The Human Reset</a>
                             </h2>
                             <span class="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-600 border-2 border-gray-400 bg-white px-4 py-2 rounded-full">
                                 Coming Soon
@@ -233,7 +233,7 @@
             <article 
                 x-data="{ synopsisOpen: false }"
                 x-intersect="synopsisOpen = false"
-                class="book-card hidden bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
+                class="book-card bg-white/90 rounded-lg shadow-xl border-2 border-gray-900/10 overflow-hidden animate-fade-in-up"
                 style="animation-delay: 0.4s"
             >
                 <div class="p-6 sm:p-8 lg:p-10">
@@ -246,7 +246,7 @@
                         >
                         <div class="text-center mb-4">
                             <h2 class="text-2xl lg:text-3xl font-light text-gray-900 mb-2 leading-tight">
-                                Connected but Lonely
+                                <a href="{{ route('books.show', 'connected-but-lonely') }}" class="hover:underline underline-offset-4">Connected but Lonely</a>
                             </h2>
                             <p class="text-sm text-gray-500 font-light italic mb-3">
                                 Why You Feel Alone and How to Truly Belong

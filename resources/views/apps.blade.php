@@ -7,6 +7,7 @@
 @section('og_description', 'Digital tools and applications designed to support your journey.')
 @section('twitter_title', 'Apps by SJ Treven')
 @section('twitter_description', 'Digital tools and applications designed to support your journey.')
+@section('robots', 'noindex, follow')
 
 @section('content')
     <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 pt-12 sm:pt-16 lg:pt-24 pb-16 sm:pb-20 lg:pb-32">

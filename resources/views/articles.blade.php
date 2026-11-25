@@ -7,6 +7,7 @@
 @section('og_description', 'Explore articles, guides, and insights on human experience, resilience, and connection.')
 @section('twitter_title', 'Articles & Guides - SJ Treven')
 @section('twitter_description', 'Explore articles, guides, and insights on human experience, resilience, and connection.')
+@section('robots', 'noindex, follow')
 
 @section('content')
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-12 sm:pt-16 lg:pt-24 pb-16 sm:pb-20 lg:pb-32">

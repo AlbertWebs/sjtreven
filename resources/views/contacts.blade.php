@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Contact - SJ Treven')
+@section('title', 'Contact SJ Treven | Author Inquiries')
 @section('meta_title', 'Contact SJ Treven | Get in Touch')
-@section('meta_description', 'Get in touch with SJ Treven for inquiries, collaborations, or to share your thoughts. Contact form available.')
+@section('meta_description', 'Contact author SJ Treven about books, media, speaking, or other inquiries.')
 @section('og_title', 'Contact SJ Treven')
 @section('og_description', 'Get in touch for inquiries, collaborations, or to share your thoughts.')
 @section('twitter_title', 'Contact SJ Treven')

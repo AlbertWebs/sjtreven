@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'About Author - SJ Treven')
+@section('title', 'About SJ Treven | Author Biography')
 @section('meta_title', 'About SJ Treven - Author Biography')
-@section('meta_description', 'Learn about SJ Treven, a writer who explores the quiet spaces between words, where meaning lives and stories breathe. Discover the author behind literary works on human experience.')
+@section('meta_description', 'Meet SJ Treven, author of He Never Said a Word and The Legend of Ndike, with forthcoming books The Human Reset and Connected but Lonely.')
 @section('og_title', 'About SJ Treven - Author')
 @section('og_description', 'SJ Treven is a writer who explores the quiet spaces between words, where meaning lives and stories breathe.')
 @section('twitter_title', 'About SJ Treven - Author')
@@ -30,6 +30,14 @@
                 
                 <p class="font-medium">
                     Treven writes for anyone who has ever felt unseen, unheard, or alone, offering not solutions, but presence. The books are quiet companions for those navigating difficult terrain, whether that's the weight of silence, the exhaustion of constant productivity, or the search for genuine belonging in an age of surface-level connection.
+                </p>
+
+                <p class="font-medium">
+                    Explore <a class="font-semibold underline underline-offset-4" href="{{ route('books.show', 'he-never-said-a-word') }}">He Never Said a Word</a>,
+                    <a class="font-semibold underline underline-offset-4" href="{{ route('books.show', 'the-legend-of-ndike') }}">The Legend of Ndike</a>,
+                    <a class="font-semibold underline underline-offset-4" href="{{ route('books.show', 'the-human-reset') }}">The Human Reset</a>, and
+                    <a class="font-semibold underline underline-offset-4" href="{{ route('books.show', 'connected-but-lonely') }}">Connected but Lonely</a>.
+                    <a class="font-semibold underline underline-offset-4" href="{{ route('books') }}">Browse all books by SJ Treven</a>.
                 </p>
                 
                 <p class="font-bold italic text-gray-900 pt-4 text-lg sm:text-xl">
