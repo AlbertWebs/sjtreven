@@ -18,7 +18,9 @@ Route::get('/books', function () {
 Route::get('/books/{slug}', [BookController::class, 'show'])->name('books.show');
 
 Route::get('/sitemap.xml', function () {
-    return response()->view('sitemap', [], 200, ['Content-Type' => 'application/xml; charset=UTF-8']);
+    $xml = '<?xml version="1.0" encoding="UTF-8"?>'.PHP_EOL.view('sitemap')->render();
+
+    return response($xml, 200, ['Content-Type' => 'application/xml; charset=UTF-8']);
 })->name('sitemap');
 
 Route::get('/apps', function () {
