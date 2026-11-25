@@ -37,28 +37,31 @@
     <meta name="twitter:image" content="@yield('twitter_image', url(asset('favicon/icon.jpeg')))">
     <meta name="twitter:image:alt" content="@yield('og_image_alt', 'SJ Treven - Author')">
 
-    <script type="application/ld+json">@json([
-        '@context' => 'https://schema.org',
-        '@graph' => [
-            [
-                '@type' => 'WebSite',
-                '@id' => 'https://www.sjtreven.com/#website',
-                'url' => 'https://www.sjtreven.com/',
-                'name' => 'SJ Treven',
-                'publisher' => ['@id' => 'https://www.sjtreven.com/#author'],
-                'inLanguage' => 'en',
+    @php
+        $siteSchema = [
+            '@context' => 'https://schema.org',
+            '@graph' => [
+                [
+                    '@type' => 'WebSite',
+                    '@id' => 'https://www.sjtreven.com/#website',
+                    'url' => 'https://www.sjtreven.com/',
+                    'name' => 'SJ Treven',
+                    'publisher' => ['@id' => 'https://www.sjtreven.com/#author'],
+                    'inLanguage' => 'en',
+                ],
+                [
+                    '@type' => 'Person',
+                    '@id' => 'https://www.sjtreven.com/#author',
+                    'name' => 'SJ Treven',
+                    'url' => 'https://www.sjtreven.com/about',
+                    'mainEntityOfPage' => 'https://www.sjtreven.com/about',
+                    'jobTitle' => 'Author',
+                    'knowsAbout' => ['Literary nonfiction', 'Fiction', 'Burnout', 'Belonging', 'Resilience'],
+                ],
             ],
-            [
-                '@type' => 'Person',
-                '@id' => 'https://www.sjtreven.com/#author',
-                'name' => 'SJ Treven',
-                'url' => 'https://www.sjtreven.com/about',
-                'mainEntityOfPage' => 'https://www.sjtreven.com/about',
-                'jobTitle' => 'Author',
-                'knowsAbout' => ['Literary nonfiction', 'Fiction', 'Burnout', 'Belonging', 'Resilience'],
-            ],
-        ],
-    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE)</script>
+        ];
+    @endphp
+    <script type="application/ld+json">@json($siteSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE)</script>
     @yield('structured_data')
     
     <!-- Favicon -->
